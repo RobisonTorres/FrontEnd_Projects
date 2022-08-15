@@ -1,0 +1,176 @@
+<!DOCTYPE html> <!-- All pages should begin with <!DOCTYPE html>. This special string
+is known as a declaration and ensures the browser tries to meet industry-wide specifications. -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">  <!-- You should allow people to use their native language.
+    Tell the browser to encode multiple languages by adding a meta element as a child
+    of the head element. Set its charset attribute to UTF-8. -->
+    <title>CatPhotoApp</title>
+    <!-- The <title> tag defines the title of the document. The title must be text-only,
+     and it is shown in the browser's title bar or in the page's tab.  -->
+</head>
+<body>
+
+<!--  HTML elements have opening tags like <h1> and closing tags like </h1>.-->
+    <h1>CatPhotoApp</h1>
+
+<!--HTML5 has some elements that identify different content areas.
+These elements make your HTML easier to read and help with Search Engine Optimization (SEO) and
+accessibility. -->
+
+<!--Take all the elements currently located within the main element
+and nest them in a section element.-->
+    <main> <!-- It identifies the main section of the page -->
+    <section>
+<!--The lower the number, the higher the importance, so h2 elements have less
+importance than h1 elements. Only use one h1 element per page and place lower
+importance headings below higher importance headings.-->
+      <h2>Cat Photos</h2>
+
+<!--The p element is used to create a paragraph of text on websites. -->
+        <!-- TODO: Add link to cat photos -->
+
+<!--You can link to another page with the anchor (a) element. -->
+
+      <!--Turn the words cat photos into a link-->
+
+      <!-- Add a target attribute with the value _blank to the anchor (a) element's
+      opening tag, so that the link opens in a new tab.-->
+
+      <!--A link's text must be placed between the opening and closing tags of
+      an anchor (a) element. -->
+      <p>Click here to view more <a href="https://freecatphotoapp.com"
+                                    target="_blank">cat photos</a>.</p>
+
+<!--You can add images to your website by using the img element. img elements have
+an opening tag without a closing tag.-->
+
+<!--. The src attribute in an img element specifies the image's URL
+(where the image is located). -->
+
+<!--All img elements should have an alt attribute. The alt attribute's text is used for
+screen readers to improve accessibility and is displayed if the image fails to load.-->
+
+      <!-- Turn the image into a link by surrounding it with necessary element tags. -->
+      <a href="https://freecatphotoapp.com">
+      <img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg"
+      alt="A cute orange cat lying on its back"></a>
+    </section>
+
+    <section>
+      <h2>Cat Lists</h2>
+        <h3>Things cats love:</h3>
+
+        <!-- Add an unordered list (ul) element.-->
+        <ul>
+            <li>cat nip</li>
+            <li>laser pointers</li>
+            <li>lasagna</li>
+        </ul>
+
+        <!-- The figure element represents self-contained content and will allow you to
+            associate an image with a caption.-->
+        <figure>
+          <img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/lasagna.jpg"
+        alt="A slice of lasagna on a plate.">
+
+          <!--figcaption is used to add a caption to describe the image.-->
+
+          <!-- Mark up emphasized text in a document.-->
+            <figcaption>Cats <em>love</em> lasagna.</figcaption>
+        </figure>
+        <h3>Top 3 things cats hate:</h3>
+
+        <!-- The code for an ordered list (ol) is similar to an unordered list,
+         but list items in an ordered list are numbered when displayed. -->
+        <ol>
+            <li>flea treatment</li>
+            <li>thunder</li>
+            <li>other cats</li>
+        </ol>
+        <figure><img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/cats.jpg"
+        alt="Five cats looking around a field.">
+
+        <!-- The strong element is used to indicate that some text is important.-->
+        <figcaption>Cats <strong>hate</strong> other cats.</figcaption>
+        </figure>
+    </section>
+
+    <section>
+      <h2>Cat Form</h2>
+
+        <!-- Now you will add a web form to collect information from users. -->
+
+        <!-- The action attribute indicates where form data should be sent. -->
+
+        <!-- The input element allows you several ways to collect data from a web form -->
+
+        <!-- Placeholder text is used to give people a hint about what kind of
+        information to enter into an input. -->
+
+        <!-- To prevent a user from submitting your form when required information is missing,
+         you need to add the required attribute to an input element. -->
+        <form action="https://freecatphotoapp.com/submit-cat-photo">
+
+            <!-- You can use radio buttons for questions where you want only one answer
+            out of multiple options. -->
+
+            <!-- label elements are used to help associate the text for an input element with the
+             input element itself (especially for assistive technologies like screen readers). -->
+
+            <!-- The id attribute is used to identify specific HTML elements. -->
+
+            <!-- To make it so selecting one radio button automatically deselects the other,
+            both buttons must have a name attribute with the same value. -->
+
+            <!-- Since your radio buttons do not have a value attribute, the form data will
+            include indoor-outdoor=on, which is not useful when you have multiple buttons.
+            Add a value attribute to both radio buttons. For convenience, set the button's
+            value attribute to the same value as its id attribute. -->
+
+            <!-- The fieldset element is used to group related inputs and labels together in
+             a web form. -->
+
+            <!-- The legend element acts as a caption for the content in the fieldset element. -->
+            <fieldset>
+
+              <!-- In order to make a checkbox checked or radio button selected by default,
+              you need to add the checked attribute to it. -->
+              <legend>Is your cat an indoor or outdoor cat?</legend>
+              <label><input checked value="indoor" name="indoor-outdoor" id="indoor"
+                            type="radio"> Indoor</label>
+              <label><input value="outdoor" name="indoor-outdoor" id="outdoor"
+                            type="radio"> Outdoor</label>
+            </fieldset>
+            <fieldset>
+                <legend>What's your cat's personality?</legend>
+
+            <!-- There's another way to associate an input element's text with the element itself.
+            You can nest the text within a label element and add a for attribute with the same
+            value as the input element's id attribute. -->
+                <input checked value="loving" type="checkbox" id="loving" name="personality">
+                <label for="loving">Loving</label>
+                <input value="lazy" type="checkbox" id="lazy" name="personality">
+                <label for="lazy">Lazy</label>
+                <input value="energetic" type="checkbox" id="energetic" name="personality">
+                <label for="energetic">Energetic</label>
+            </fieldset>
+            <input type="text" required placeholder="cat photo URL" name="catphotourl"></form>
+
+        <!-- Use the button element to create a clickable button. -->
+
+        <!-- The button you added will submit the form by default. However, relying on default
+         behavior may cause confusion. -->
+        <button type="submit">Submit</button>
+    </section>
+
+    </main>
+    <footer>
+        <p>No Copyright - <a href="https://www.freecodecamp.org">freeCodeCamp.org</a></p>
+    </footer>
+
+<!--Nested elements should be placed two spaces further to the right of the
+element they are nested in.-->
+
+</body>
+</html>

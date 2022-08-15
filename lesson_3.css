@@ -1,0 +1,18 @@
+h1 {text-align: center;}
+
+/* Create a new CSS rule that targets the class marker, and set its 
+background-color property to red.*/
+.marker {background-color: red;       
+    
+/*Notice that your marker doesn't seem to have any color. The background color was
+actually applied, but since the marker div element is empty, it doesn't have any
+height by default.*/
+        width: 200px;
+        height: 25px;
+
+/*To center your marker on the page, set its margin property to auto. 
+This sets margin-top, margin-right, margin-bottom, and margin-left all to auto.*/     
+
+/*When the shorthand margin property has two values, it sets margin-top and margin-bottom
+to the first value, and margin-left and margin-right to the second value.*/
+        margin: 10px auto;} /*This devides the bars.*/

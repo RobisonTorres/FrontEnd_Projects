@@ -1,0 +1,140 @@
+h1, h2, p {
+    text-align: center;}
+/*
+    h1 {text-align: center;}
+    h2 {text-align: center;}
+    p {text-align: center;} 
+*/
+/* body {background-color: burlywood;} */
+
+/* Change the width property's value to be 80%, to make it 80% the width of its 
+parent element (body).*/
+
+/* change div to .class-name */
+.menu {/*width: 300px;*/
+    /* You can give your menu some space between the content and the sides with
+    various padding properties. */
+    width: 80%;
+    background-color: burlywood;
+
+    /* Since all 4 sides of the menu have the same internal spacing, go ahead and
+    delete the four properties and use a single padding property with the value 20px. */
+    padding: 20px;
+    /*
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px; */
+
+/* Next, you want to center the div horizontally. You can do this by setting its 
+margin-left and margin-right properties to auto. */
+    margin-left: auto;
+    margin-right: auto;
+    /* Add a max-width property to the menu class with a value of 500px to prevent 
+    it from growing too wide. */
+    max-width: 500px;
+    
+}
+    
+body {
+    background-image: url(https://cdn.freecodecamp.org/curriculum/css-cafe/beans.jpg);
+    font-family: sans-serif; /* This is a fairly common font that is very readable. */
+
+    /* To create a little more room around the menu.*/
+    padding: 20px;
+}
+
+/* Style both the h1 and the h2 elements so that only these elements' text use Impact font. */
+/* You can add a fallback value for the font-family by adding another font name separated by 
+a comma. Fallbacks are used in instances where the initial is not found/available. */
+h1, h2 {font-family: Impact, serif;}
+
+h1 {font-size: 40px;
+
+    /* Change the top margin of the h1 element to 0 to remove all the top margin. */
+    margin-top: 0;
+    margin-bottom: 15px;}
+
+h2 {font-size: 30px;}
+
+/* Using your new flavor class as a selector, set the text-align property's value to left.*/
+
+/* To spread them out, add a width property to the flavor and price class selectors 
+that have a value of 50% each. */
+
+/* Since the flavor class selector already has the properties you want, just add the 
+dessert class name to it. */
+.flavor, .dessert {
+    text-align: left;
+    width: 75%;}
+
+/* Now align the text to the right for the elements with the price class. */
+.price {
+    text-align: right;
+    width: 25%;}
+
+/* 
+The p elements are nested in an article element with the class attribute of item.
+You can style all the p elements nested anywhere in elements with a class named item like this:
+.item p { }
+Using the above selector, add a display property with value inline-block so the p elements 
+behave more like inline elements.
+*/
+.item p{
+    display: inline-block;
+
+/* Focusing on the menu items and prices, there is a fairly large gap between each line. */    
+    margin-top: 5px;
+    margin-bottom: 5px;
+
+/* Using the same style selector in the previous step, make the font size of the items
+ and prices larger by using a value of 18px. */
+    font-size: 18px;}
+
+/* Make the Est. 2020 text italicized by creating an established class selector and 
+giving it the font-style property with the value italic. */
+.established {
+    font-style: italic;}
+
+/* Change the height of the hr element to be 3px. */
+hr {height: 3px;
+    background-color: brown;
+/* Make all the edges of the hr element the same color as the background of it 
+using the border-color property.*/    
+    border-color: brown;
+    height: 2px;}
+
+.bottom-line {margin-top: 25px;}
+
+/* Footer */
+footer {font-size: 14px;}
+
+/* To make the footer links the same color regardless if a link has been visited,
+use a type selector for the anchor element (a) and use the value black for the color property. */
+a {color: black;}
+
+/* Change the color of the footer Visit our website link to be grey when a user 
+has visited the link. */
+a:visited {color: black;}
+
+/* Change the color of the footer Visit our website link to be brown when a user hovers over it. */
+a:hover {color: brown;}
+
+/* Change the color of the footer Visit our website link to be white when clicked on. */
+a:active {color: brown;}
+
+/* To decrease the default margin space below the address p element, create a class selector
+named address and use the value 5px for the margin-bottom property. */
+.address {margin-bottom: 5px;}
+
+/*To make the image behave like heading elements (which are block-level), 
+create an img type selector and use the value block for the display property 
+and use the applicable margin-left and margin-right values to center it horizontally.*/
+img {display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+/*It would be nice if the vertical space between the h2 elements and their 
+associated icons was smaller.*/
+    margin-top: -25px;
+    }
