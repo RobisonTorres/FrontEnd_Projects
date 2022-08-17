@@ -27,6 +27,12 @@ that red is at the max value, and set green to 127.*/
 color arguments, which are the colors that will be used in the transition itself. */
 .red {background: linear-gradient(rgb(122, 74, 14),
          rgb(245, 62, 113), rgb(162, 27, 27));
+
+/*The box-shadow property lets you apply one or more shadows around an element. */
+
+/* update the values for the box-shadow property so offsetX is 0,offsetY is 0,
+blurRadius is 20px, spreadRadius is 0, and color is red.*/
+      box-shadow: 0 0 20px 0 rgba(83, 14, 14, 0.8);        
       }
 
 /* Create a CSS rule that targets the class two and set its background-color property to green. */
@@ -37,14 +43,16 @@ third pair represent blue.*/
 
 /*With hex colors, 00 is 0% of that color, and FF is 100%. So #00FF00 translates to 0% red,
 100% green, and 0% blue, and is the same as rgb(0, 255, 0).*/
-.green {background: linear-gradient(#55680D), #71F53E, #116C31;}
+.green {background: linear-gradient(#55680D, #71F53E, #116C31);
+        box-shadow: 0 0 20px 0 #3b7e20cc;}
 
 .blue {
 
 /*The CSS hsl function accepts 3 values: a number from 0 to 360 for hue, 
 a percentage from 0 to 100 for saturation, and a percentage from 0 to 100 for lightness.*/
-        background: linear-gradient(hsl(186, 76%, 16%), hsl(223, 90%, 60%)
-        hsl(240, 56%, 42%));}
+        background: linear-gradient(hsl(186, 76%, 16%), hsl(223, 90%, 60%),
+        hsl(240, 56%, 42%));
+        box-shadow: 0 0 20px 0 hsla(223, 59%, 31%, 0.8);}
 
 /* Create a new CSS rule that targets the class container and set its background-color 
 to black with rgb(0, 0, 0).*/
@@ -67,7 +75,10 @@ function in the .container rule, set the red, green, and blue values to the max 
 /*With the value 0, or 0%, the element will be completely transparent, and at 1.0, 
 or 100%, the element will be completely opaque like it is by default.*/
         background-color: rgba(255, 255, 255, 0.5);
-        border-left: 10px double black;}
+
+/*For the border-left shorthand property, use the rgba function to set the color value to 
+pure black with 75% opacity.*/
+        border-left: 10px double rgba(0, 0, 0, 0.75);}
 
 .cap {width: 60px;
       height: 25px;}
