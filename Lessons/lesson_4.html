@@ -45,15 +45,17 @@ or more lowercase letters or the digits 0 to 5.-->
 
 <!-- You only want one radio input to be selectable at a time. However, the form does not
 know the radio inputs are related.-->
-        <label><input type="radio" name="account-type"> 
+
+<!-- For the second fieldset, you want the input and label text to appear on the same line.-->
+        <label><input type="radio" name="account-type" class="inline"> 
           Personal Account</label>
-        <label><input type="radio" name="account-type"> 
+        <label><input type="radio" name="account-type" class="inline"> 
           Business Account</label>
 
 <!-- For the terms and conditions, add an input with a type of checkbox to the third 
 label element. Also, as we do not want users to sign up, without having read the terms
 and conditions, make it required.-->
-        <label><input name="terms" type="checkbox" required>I accept the
+        <label><input name="terms" type="checkbox" required class="inline"> I accept the
           <a href="https://www.freecodecamp.org/news/terms-of-service/">
             terms and conditions</a></label>
       </fieldset>

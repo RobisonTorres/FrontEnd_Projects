@@ -8,7 +8,9 @@ body {width: 100%;
 
 /* Now, make the background easy on the eyes, by changing the body background-color
 to #1b1b32. Then, to see the text, change the color to #f5f6f7.*/
-    color: #f5f6f7;}
+    color: #f5f6f7;
+    font-family: Tahoma;
+    font-size: 16px;}
 
 /* As label elements are inline by default, they are all displayed side by side on 
 the same line, making their text hard to read. To make them appear on separate lines,
@@ -16,3 +18,55 @@ add display: block to the label element, and add a margin of 0.5rem 0, to separa
 from each other.*/
 label {display: block;
     margin: 0.5rem 0;}
+
+/* Center the h1 and p elements by giving them a margin of 1em auto. 
+Then, align their text in the center as well.*/
+h1, p {margin: 1em auto;
+    text-align: center;}
+
+/* Center the form element, by giving it a margin of 0 auto. 
+Then, fix its size to a maximum width of 500px, and a minimum width of 300px. 
+In between that range, allow it to have a width of 60vw.*/
+form {margin: 0 auto;
+    max-width: 500px;
+    width: 60vw;
+    min-width: 300px;}
+
+/* During development, it is useful to see the fieldset default borders. 
+However, they make the content appear too separated. Remove the border,
+and add 2rem of padding only to the top and bottom of each fieldset. 
+Be sure to remove the padding from the left and right.
+*/
+
+/* To give the fieldset elements a bit of separation, select them and give them a 
+border-bottom of 3px solid #3b3b4f.*/
+fieldset {border: 0;
+    border-bottom: 3px solid #3b3b4f;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    padding-left: 0;
+    padding-right: 0;}
+
+/* You can select the last element of a specific type using the last-of-type
+ CSS pseudo-class, like this:*/
+fieldset:last-of-type {border-bottom: none}
+
+/* Select all input, textarea, and select elements, and make them take up the full
+width of their parent elements.*/
+input, textarea, select {
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+/* Select only the .inline elements, and give them width of unset. 
+This will remove the earlier rule which set all the input elements to width: 100%.*/
+
+/* Add some space between the .inline elements and the label text,
+by giving a right margin of 0.5em. Also, set all the other margin to 0.*/
+.inline {width: unset;
+    margin: 0 0.5em 0 0;
+    vertical-align: middle;
+    }
