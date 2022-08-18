@@ -15,7 +15,7 @@ a server for processing. -->
 
 <!-- As the form will have three distinct sections, add three fieldset elements within the
 form element.-->
-      <fieldset></fieldset>
+      <fieldset>
 
 <!-- Specifying the type attribute of a form element is important for the browser to
 know what kind of data it should expect. If the type is not specified, the browser will 
@@ -24,9 +24,13 @@ default to text. (within input)-->
 <!-- To make the form more interactive, add the required attribute to the input elements 
 in the first fieldset. Now, if you try to submit the form without filling in the required 
 fields, you will see an error message.-->
-        <label>Enter Your First Name: <input type="text" required></label>
-        <label>Enter Your Last Name: <input type="text" required></label>
-        <label>Enter Your Email: <input type="email" required></label>
+
+<!-- With form submissions, it is useful, and good practice, to provide each submittable
+element with a name attribute. This attribute is used to identify the element in the form
+submission.-->
+        <label>Enter Your First Name: <input name="first-name"  type="text" required></label>
+        <label>Enter Your Last Name: <input name="last-name" type="text" required></label>
+        <label>Enter Your Email: <input name="email" type="email" required></label>
 
 <!-- Add custom validation to the password input element, by adding a minlength attribute
 with a value of 8. Doing so prevents inputs of less than 8 characters being submitted.-->
@@ -34,8 +38,9 @@ with a value of 8. Doing so prevents inputs of less than 8 characters being subm
 <!-- Add a pattern attribute to the password input element to require the 
 input match: [a-z0-5]{8,} The above is a regular expression which matches eight 
 or more lowercase letters or the digits 0 to 5.-->
-        <label>Create a New Password: <input type="password" 
+        <label>Create a New Password: <input name="password" type="password" 
           required pattern="[a-z0-5]{8,}"></label>
+      </fieldset>    
       <fieldset>
 
 <!-- You only want one radio input to be selectable at a time. However, the form does not
@@ -48,12 +53,33 @@ know the radio inputs are related.-->
 <!-- For the terms and conditions, add an input with a type of checkbox to the third 
 label element. Also, as we do not want users to sign up, without having read the terms
 and conditions, make it required.-->
-        <label><input type="checkbox" required>I accept the
+        <label><input name="terms" type="checkbox" required>I accept the
           <a href="https://www.freecodecamp.org/news/terms-of-service/">
             terms and conditions</a></label>
       </fieldset>
-        <label>Upload a profile picture: <input type="file"></label>
-      <fieldset></fieldset>
+      <fieldset>
+        <label>Upload a profile picture: <input name="picture" type="file"></label>
+        <label>Input your age (years): <input name="age" type="number" min="13" max="120"></label>
+        <label>How did you hear about us?
+          <select name=about-us>
+
+<!--Submitting the form with an option selected would not send a useful value to the server. 
+As such, each option needs to be given a value attribute. Without which, the text content
+of the option will be submitted to the server.-->
+            <option value="">(select one)</option>
+            <option value="1">freeCodeCamp News</option>
+            <option value="2">freeCodeCamp YouTube Channel</option>
+            <option value="3">freeCodeCamp Forum</option>
+            <option value="4">Other</option>  
+          </select>
+        </label>  
+
+<!--The textarea element acts like an input element of type text, but comes with the added 
+benefit of being able to receive multi-line text, and an initial number of text rows 
+and columns.-->        
+        <label>Provide a bio:<textarea  name="bio" rows="3" cols="30" 
+          placeholder="I like coding on the beach..."></textarea></label>
+      </fieldset>
 
 <!-- The first input element with a type of submit is automatically set to submit its 
 nearest parent form element.-->
