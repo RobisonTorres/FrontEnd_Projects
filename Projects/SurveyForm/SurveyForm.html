@@ -6,81 +6,61 @@
     <title>Document</title>
 </head>
 <body>  
-    <h1 id="title">freeCodeCamp Survey Form</h1>
-    <p id="description">Thank you for taking the time to help us improve the platform</p>
+    <h1 id="title">games.com Survey Form</h1>
+    <p id="description">Thank you for answering the questions.</p>
     <form id="survey-form">
         <fieldset>
-          <label id="name-label">Name<input placeholder="Enter your name" 
+          <label id="name-label">Name <input placeholder="Enter your name" 
             id="name" type="text" required></label>    
-          <label id="email-label">Email<input placeholder="Enter your email" 
+          <label id="email-label">Email <input placeholder="Enter your email" 
             id="email" type="email" required></label>
-          <label id="number-label">Age (optional)<input placeholder="age" id="number" 
+          <label id="number-label">Age (optional) <input placeholder="age" id="number" 
             type="number" min="10" max="99" required></label>
         </fieldset>
         <fieldset>
-          <label>Which option best describes your current role?
+          <label>How often do you play games?
             <select id="dropdown">
-              <option value="">Select current role</option>
-              <option value="1">Student</option>
-              <option value="2">Full time job</option>
-              <option value="3">Full time learn</option>
+              <option value="">Select an option</option>
+              <option value="1">Everyday</option>
+              <option value="2">Once a while</option>
+              <option value="3">Never</option>
               <option value="4">Prefer not say</option>
-              <option value="5">Other</option>
             </select>
           </label>
         </fieldset>
         <fieldset>
-          <label>Would you recommend freeCodeCamp to a friend?
+          <label>Would you recommend games.com to a friend?
             <input value="Definitely" name="attribute" type="radio">Definitely</label>
             <input value="Maybe" name="attribute" type="radio">Maybe</label>
             <input value="Not sure" name="attribute" type="radio">Not sure</label>
         </fieldset>
         <fieldset>
-          <label>What is your favorite feature of freeCodeCamp?
+          <label>What do you expect to see in future upgrades?
             <select id="dropdown">
               <option value="">Select an option</option>
-              <option value="1">Challenges</option>
-              <option value="2">Projects</option>
-              <option value="3">Community</option>
-              <option value="4">Open source</option>
+              <option value="1">Discout in games</option>
+              <option value="2">More options</option>
+              <option value="3">A greater community</option>              
             </select>    
           </label>  
         </fieldset>
         <fieldset>
-          <legend>What would you like to see improved? (Check all that apply)</legend>
-          <input value="Front-end Projects" type="checkbox" 
-          id="Front-end Projects" name="options">
-          <label for="Front-end Projects">Front-end Projects</label>
-          <input value="Back-end Projects" type="checkbox" 
-          id="Back-end Projects" name="options">
-          <label for="Back-end Projects">Back-end Projects</label>
-          <input value="Data Visualization" type="checkbox" 
-          id="Data Visualization" name="options">
-          <label for="Data Visualization">Data Visualization</label>
-          <input value="Challenges" type="checkbox" 
-          id="Challenges" name="options">
-          <label for="Challenges">Challenges</label>
-          <input value="Open Source Community" type="checkbox" 
-          id="Open Source Community" name="options">
-          <label for="Open Source Community">Open Source Community</label>
-          <input value="Gitter help rooms" type="checkbox" 
-          id="Gitter help rooms" name="options">
-          <label for="Gitter help rooms">Gitter help rooms</label>
-          <input value="Videos" type="checkbox" 
-          id="Videos" name="options">
-          <label for="Videos">Videos</label>
-          <input value="City Meetups" type="checkbox" 
-          id="City Meetups" name="options">
-          <label for="City Meetups">City Meetups</label>
-          <input value="Wiki" type="checkbox" 
-          id="Wiki" name="options">
-          <label for="Wiki">Wiki</label>
-          <input value="Forum" type="checkbox" 
-          id="Forum" name="options">
-          <label for="Forum">Forum</label>
-          <input value="Additional Courses" type="checkbox" 
-          id="Additional Courses" name="options">
-          <label for="Additional Courses">Additional Courses</label>                   
+          <legend>What kind of game do you prefer? (Check all that apply)</legend>
+          <input value="FPS" type="checkbox" 
+          id="FPS" name="options">
+          <label for="FPS">FPS</label>
+          <input value="Soccer" type="checkbox" 
+          id="Soccer" name="options">
+          <label for="Soccer">Soccer</label>
+          <input value="RPG" type="checkbox" 
+          id="RPG" name="options">
+          <label for="RPG">RPG</label>
+          <input value="Puzzle" type="checkbox" 
+          id="Puzzle" name="options">
+          <label for="Puzzle">Puzzle</label>
+          <input value="Race" type="checkbox" 
+          id="Race" name="options">
+          <label for="Race">Race</label>                           
         </fieldset>
         <fieldset>
           <label>Any comments or suggestions?<textarea name="suggestions" rows="3" cols="30" 
