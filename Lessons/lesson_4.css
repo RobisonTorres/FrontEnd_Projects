@@ -30,7 +30,8 @@ In between that range, allow it to have a width of 60vw.*/
 form {margin: 0 auto;
     max-width: 500px;
     width: 60vw;
-    min-width: 300px;}
+    min-width: 300px;
+    padding-bottom: 2em;}
 
 /* During development, it is useful to see the fieldset default borders. 
 However, they make the content appear too separated. Remove the border,
@@ -59,6 +60,7 @@ input, textarea, select {
     margin-bottom: 0;
     margin-left: 0;
     margin-right: 0;
+    min-height: 2em;
 }
 
 /* Select only the .inline elements, and give them width of unset. 
@@ -70,3 +72,36 @@ by giving a right margin of 0.5em. Also, set all the other margin to 0.*/
     margin: 0 0.5em 0 0;
     vertical-align: middle;
     }
+
+/* To make the input and textarea elements blend in with the background theme,
+set their background-color to #0a0a23. Then, give them a 1px, solid border with
+a color of #0a0a23.*/
+
+/* Currently, if you type in the input or textarea elements, you will not be able
+to see the text. Also, their height is too small to be easy to use.
+Fix this, by setting the color to #ffffff, and setting their min-height to 2em.*/
+input, textarea {background-color: #0a0a23;
+                border: 1px solid #0a0a23;
+                color: #ffffff;}
+
+/* To style the submit button, you can use an attribute selector,
+which selects an element based on the given attribute value*/
+input[type="submit"] {display: block;
+                      width: 60%;
+                      min-width: 300px;
+                      margin-top: 1em;
+                      margin-bottom: 1em;
+                      margin-left: auto;
+                      margin-right: auto;
+
+/* To make the submit button look more in line with the rest of the form,
+give it the same height as the other fields (2em). Also, increase the font-size to 1.1rem.*/
+                      height: 2em;
+                      font-size: 1.1rem;
+                      background-color: #3b3b4f;
+                      border-color: white;}
+
+input[type="file"] {padding: 1px 2px;}
+
+/* Last, but not least, change the text color of the terms and conditions link to #dfdfe2.*/
+a {color: #dfdfe2;}
