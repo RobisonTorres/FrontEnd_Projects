@@ -45,7 +45,7 @@ input, textarea {background-color: #0a0a23;
                 border: 1px solid #0a0a23;
                 color: #ffffff;}
 
-                input[type="submit"] {display: block;
+input[type="submit"] {display: block;
                       width: 60%;
                       min-width: 300px;
                       margin-top: 1em;
