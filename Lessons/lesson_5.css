@@ -1,0 +1,90 @@
+/* Write a CSS rule that uses the .canvas class selector and set its width to 500 pixels. */
+
+.canvas {width: 500px;
+    height: 600px;
+    background-color: #4d0f00;
+
+/* The colors and shapes of your painting are too sharp to pass as a Rothko.
+Use the filter property to blur the painting by 2px in the .canvas element.*/
+    filter: blur(2px);}
+
+/* Use the border shorthand declaration to give the .frame element a solid,
+black border with a width of 50px.*/
+.frame {border: solid black 50px;
+    width: 500px;
+
+/* In .frame, use the padding shorthand property to increase the space between 
+the .frame and .canvas elements by 50px. The shorthand will increase space in the
+top, bottom, left, and right of the element's border and canvas within.*/
+    padding: 50px;
+
+/* Use margins to adjust the spacing outside of an element.*/
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;} 
+
+/* Write a new rule that targets .one and set its width to 425 pixels.*/
+.one {width: 425px;
+    height: 150px;
+    background-color: #efb762;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+
+/* Add padding of 1px to the .canvas element to give the .one element something
+solid to push off of.*/
+
+/* Replace the padding property with overflow set to hidden - 
+ changing the canvas back to its original dimensions.*/
+    overflow: hidden;
+
+/* The rectangles are too small and their edges don't have the soft quality of a painting.
+Increase the area and soften the edges of .one by setting its box-shadow to 0 0 3px 3px #efb762.*/
+    box-shadow: 0 0 3px 3px #efb762;
+
+/* The corners of each rectangle are still too sharp. Round each corner of 
+the .one element by 9 pixels, using the border-radius property.*/
+    border-radius: 9px;
+
+/* Rotate each rectangle to give them more of an imperfect, hand-painted look.
+Use the transform property on the .one selector to rotate it counter clockwise by 0.6 degrees.*/
+transform: rotate(-0.6deg);
+}
+
+.two {width: 475px;
+    height: 200px;
+    background-color: #8f0401;
+
+/* Center the .two element by setting its margin to auto.*/
+
+/* This will remove its top margin, horizontally center it, 
+and set its bottom margin to 20 pixels.*/
+    margin-top: 0;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    box-shadow: 0 0 3px 3px #8f0401;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 8px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 10px;
+    transform: rotate(0.4deg);
+}
+
+.three {width: 91%;
+    height: 28%;
+    background-color: #b20403;
+    filter: blur(2px);
+    box-shadow: 0 0 5px 5px #b20403;
+
+/* Center the .three element on the canvas by setting its margin to auto.*/
+    margin: auto;
+
+/* The border-radius property accepts up to four values to round the top-left, 
+top-right, bottom-right, and bottom-left corners.*/
+    border-radius: 30px 25px 60px 12px;
+    transform: rotate(-0.2deg)}
+
+.one, .two {filter: blur(1px);}
