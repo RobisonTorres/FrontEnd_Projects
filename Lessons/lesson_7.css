@@ -1,0 +1,39 @@
+body {font-family: "Open Sans", sans-serif;}
+
+html {font-size: 16px;}
+
+/* Borders can be used to group and prioritize content. Create a .label selector
+ and give it a border set to 2px solid black.*/
+ .label {border: 2px solid black;
+    width: 270px;
+    margin: 20px auto;
+    padding: 0 7px;}
+
+/* If you inspect your .label element with your browser's developer tools, 
+you may notice that it's actually 288 pixels wide instead of 270. This is because,
+by default, the browser includes the border and padding when determining an element's size.
+To solve this, reset the box model by creating a * selector and giving it a 
+box-sizing property of border-box.*/
+* {box-sizing: border-box;}
+
+h1 {
+    text-align: center;
+    margin-top: -4px;  /*-4px (top-bottom), 0 (left-right)*/
+    margin-bottom: -4px;
+    margin-left: 0;
+    margin-right: 0;
+
+/* The letter-spacing property can be used to adjust the space between each character 
+of text in an element. */
+    letter-spacing: 0.15px;}
+
+/* Create a p selector and remove all margins.*/
+p {margin: 0;}
+
+.divider {border-bottom: 1px solid #888989;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    margin-left: 0;
+    margin-right: 0;}
+
+.bold {font-weight: 800;}
