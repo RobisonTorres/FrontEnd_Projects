@@ -16,7 +16,7 @@ To solve this, reset the box model by creating a * selector and giving it a
 box-sizing property of border-box.*/
 * {box-sizing: border-box;}
 
-h1 {
+header h1 {
     text-align: center;
     margin-top: -4px;  /*-4px (top-bottom), 0 (left-right)*/
     margin-bottom: -4px;
@@ -34,6 +34,37 @@ p {margin: 0;}
     margin-top: 2px;
     margin-bottom: 2px;
     margin-left: 0;
-    margin-right: 0;}
+    margin-right: 0;
+
+/* This will clear the float property, pushing the divider and any following content
+down below the float text.*/
+    clear: right;}
 
 .bold {font-weight: 800;}
+
+/* The float property is used to place an element on the left or right of its container,
+allowing other content (such as text) to wrap around it.
+Create a new .right selector and set the float property to right.*/
+.right {float: right;}
+
+.lg {height: 10px;}
+
+.lg, .md {background-color: black;
+    border: 0;}
+
+/* The rem unit stands for root em, and is relative to the font size of the html element.*/
+.sm-text {font-size: 0.85rem;}
+
+
+/* Create a new .calories-info h1 selector setting the top and bottom margin to -5px,
+and the left and right margin to -2px.*/
+
+/* The larger font size of the number 230 is causing it to overflow. Give the .calories-info
+h1 an overflow property set to hidden to avoid this.*/
+.calories-info h1 {margin: -5px -2px;
+    overflow: hidden;}
+
+.calories-info span {font-size: 1.2em;
+    margin-top: -7px;}
+
+.md {height: 5px;}
