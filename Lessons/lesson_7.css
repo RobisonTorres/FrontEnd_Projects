@@ -55,7 +55,6 @@ Create a new .right selector and set the float property to right.*/
 /* The rem unit stands for root em, and is relative to the font size of the html element.*/
 .sm-text {font-size: 0.85rem;}
 
-
 /* Create a new .calories-info h1 selector setting the top and bottom margin to -5px,
 and the left and right margin to -2px.*/
 
@@ -68,3 +67,14 @@ h1 an overflow property set to hidden to avoid this.*/
     margin-top: -7px;}
 
 .md {height: 5px;}
+
+.indent {margin-left: 1em;}
+
+/* Create a .daily-value p selector to target all of your p elements in the 
+daily-value section. Give this new selector a border-bottom set to 1px solid #888989.*/
+
+/* The :not pseudo-selector can be used to select all elements that do not
+match the given CSS rule. Modify your .daily-value p selector to exclude the .no-divider elements.*/ 
+.daily-value p:not(.no-divider) {border-bottom: 1px solid #888989;}
+
+
