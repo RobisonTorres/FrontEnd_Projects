@@ -77,4 +77,12 @@ daily-value section. Give this new selector a border-bottom set to 1px solid #88
 match the given CSS rule. Modify your .daily-value p selector to exclude the .no-divider elements.*/ 
 .daily-value p:not(.no-divider) {border-bottom: 1px solid #888989;}
 
+.dbl-indent {margin-left: 2em;}
 
+.note {font-size: 0.6rem;
+    margin: 5px 0;
+
+/* Give the .note selector a left and right padding of 8px, removing the top and 
+bottom padding. Also set the text-indent property to -8px.*/
+    padding: 0 8px;
+    text-indent: -8px;}
