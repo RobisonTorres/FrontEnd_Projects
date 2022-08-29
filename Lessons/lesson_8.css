@@ -10,6 +10,13 @@ header {
       height: 50px;
       background-color: #1b1b32;
       display: flex;
+
+/* Tidy up the header, by using Flexbox to put space between the children, 
+and vertically center them. Then, fix the header to the top of the viewport.*/
+      justify-content: space-between;
+      align-items: center;
+      position: fixed;
+      top: 0;
   }
   
 #logo {
@@ -19,10 +26,17 @@ header {
     padding: 0.4rem;
   }
   
+
+/* When the screen width is small, the h1 does not wrap its text content how it should. 
+Align the text for the h1 element in the center.*/  
 h1 {
     color: #f1be32;
       font-size: min(5vw, 1.2em);
+      text-align: center;
   }
+
+/* Then, give the main padding such that the Student Info section header can be fully seen.*/  
+main {padding-top: 25px;}  /*At least 25px*/
   
 nav {
     width: 50%;
@@ -59,3 +73,26 @@ h2 {
 /* To prevent unnecessary repetition, target the before pseudo-element of the
 p element, and give it a content property of "Question #".*/
 p::before {content: "Question #";}
+
+nav > ul > li  {color: #dfdfe2;
+  margin: 0 0.2rem;
+  padding: 0.2rem;
+  display: block;}
+
+/* On the topic of visual accessibility, contrast between elements is a key factor. 
+For example, the contrast between the text and the background of a heading should 
+be at least 4.5:1. Change the font color of all the anchor elements within the list 
+elements to something with a contrast ratio of at least 7:1.*/  
+li > a {color: inherit;
+
+/* To make the navigation buttons look more like typical buttons, remove the underline 
+from the anchor tags.*/  
+  text-decoration: none;}
+
+/* Then, create a new selector targeting the navigation list elements so that when the 
+cursor hovers over them, the background color and text color are switched, and the cursor
+becomes a pointer.*/
+nav > ul > li:hover {background-color: #dfdfe2;
+  color: #1b1b32;
+  cursor: pointer;}
+  
