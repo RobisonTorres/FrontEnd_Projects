@@ -55,7 +55,9 @@ This is done by giving the label a for attribute, which contains the id of the i
             <input type="email" name="email" id="email">
         </div>
         <div class="info">
-          <label for="birth-date">D.O.B.<span class="sr-only">(Date of Birth)</span></label>
+          <label for="birth-date">D.O.B.<span class="sr-only">(Date of Birth)
+            </span>
+          </label>
             <input type="date" name="birth-date" id="birth-date">
         </div>
       <section aria-labelledby="html-questions" role="region">
@@ -65,8 +67,14 @@ This is done by giving the label a for attribute, which contains the id of the i
           <fieldset name="first" class="question">
             <legend>true or false?</legend>
             <ul class="answers-list">
-              <li></li>
-              <li></li>
+              <li>
+                <label for="q1-a1">
+                  <input name="q1" id="q1-a1" type="radio" value="True">True</label>
+              </li>
+              <li>
+                <label for="q1-a2">
+                  <input name="q1" id="q1-a2" type="radio" value="False">False</label>
+              </li>
             </ul>
           </fieldset>
         </div>
@@ -75,14 +83,40 @@ This is done by giving the label a for attribute, which contains the id of the i
           <fieldset name="second" class="question">
             <legend>true or false?</legend>
             <ul class="answers-list">
-              <li></li>
-              <li></li>
+              <li>
+                <label for="q2-a1">
+                  <input name="q2" id="q2-a1" type="radio" value="True">True</label>
+              </li>
+              <li>
+                <label for="q2-a2">
+                  <input name="q2" id="q2-a2" type="radio" value="False">False</label>
+              </li>
             </ul>
           </fieldset>
         </div>
       </section>
       <section aria-labelledby="css-questions" role="region">
-        <h2 id="css-questions">CSS</h2></section>
+        <h2 id="css-questions">CSS</h2>
+        <div class="formrow">
+          <div class="question-block">
+            <label for="customer">Are you a frontend developer?</label>
+          </div>
+          <div class="answer">
+            <select id="customer" required name="customer">
+              <option value="">Select an option</option>
+              <option value="yes">Yes</option>
+              <option value="no">No</option>
+            </select>
+          </div>
+          <div class="question-block">
+            <label for="css-questions">Do you have any question:</label>
+          </div>
+          <div class="answer">
+            <textarea id="css-questions" name="css-questions" id="" cols="24" rows="5"
+            placeholder="Who is flexbox..."></textarea>
+          </div>
+        </div>
+      </section>
     </form>
   </main>
   </html>
