@@ -41,13 +41,13 @@ using the correct method.-->
 <!-- Every region role requires a visible label, which should be referenced 
 by the aria-labelledby attribute.-->    
       <section aria-labelledby="student-info" role="region">
-        <h2 id="student-info">Student Info</h2></section>
+        <h2 id="student-info">Student Info</h2>
         
 <!-- It is important to link each input to the corresponding label element. 
 This provides assistive technology users with a visual reference to the input.
 This is done by giving the label a for attribute, which contains the id of the input.-->        
         <div class="info">
-          <label for="name">Name</label>
+          <label for="name">Name:</label>
             <input type="text" name="name" id="name">
         </div>
         <div class="info">
@@ -60,6 +60,7 @@ This is done by giving the label a for attribute, which contains the id of the i
           </label>
             <input type="date" name="birth-date" id="birth-date">
         </div>
+      </section>  
       <section aria-labelledby="html-questions" role="region">
         <h2 id="html-questions">HTML</h2>
         <div class="question-block">
