@@ -1,3 +1,12 @@
+/* Clicking on the navigation links should jump the viewport to the relevant section.
+However, this jumping can be disorienting for some users. Select all elements, 
+and set the scroll-behavior to smooth.*/
+
+/* The @media rule is used in media queries to apply different styles for
+different media types/devices.*/
+@media (prefers-reduced-motion: no-preference) {
+* {scroll-behavior: smooth;}}
+
 body {background: #f5f6f7;
   color: #1b1b32;
   font-family: Helvetica;
@@ -100,8 +109,71 @@ nav > ul > li:hover {background-color: #dfdfe2;
 
 section {width: 80%;
   margin: 0 auto 10px auto;
-  max-width: 600px;
-}
+  max-width: 600px;}
 
 .info {padding: 1px 0 0 1px;} /*top right bottom left*/
 
+.formrow {margin-top: 30px;
+  padding: 0px 15px;}  /*top & bottom, right & left*/
+
+input {font-size: 16px;}
+
+
+/* To align the input boxes with each other, set the display property to 
+inline-block for all input and label elements within .info elements.
+Also, align the text to the right.*/
+.info label, .info input {display: inline-block;
+  text-align: right;}
+
+/* To make the first section look more inline, target only the input elements within 
+.info elements, and set their width to 50%, and left-align their text.*/
+.info > input {width: 50%;
+  text-align: left;}
+
+/* Target all label elements within .info elements, and set their width to 10%,
+and make it so they do not take up less than 55px.*/  
+.info > label {width: 10%;
+  min-width: 55px;}
+
+.question-block {text-align: left;
+  display: block;
+  width: 100%;
+  margin-top: 20px;
+  padding-top: 5px;}
+
+/* Make the paragraph elements appear as a higher priority, with the following CSS properties:*/
+p {margin-top: 5px;
+  padding-left: 15px;
+  font-size: 20px;}
+
+/* It is useful to see the default border around the fieldset elements, during development.
+However, it might not be the style you want. Remove the border and bottom padding 
+on the .question elements.*/
+.question {border: none;
+  padding: 0 0;}
+
+/* Remove the default styling for the list items of .answers-list, and remove the
+unordered list padding.*/
+.answers-list {list-style: none;
+  padding: 0 0;}
+
+button {display: block;
+  margin: 40px auto;
+  width: 40%;
+  padding: 15px;
+  font-size: 23px;
+  background: #d0d0d5;
+  border: 3px solid #3b3b4f;} 
+
+
+/* Set the footer background color to #2a2a40, and use Flexbox to horizontally center the text.*/  
+footer {background-color: #2a2a40;
+  display: flex;
+  justify-content: center;}
+
+/* Now, we cannot read the text. Target the footer and the anchor element within to set 
+the font color to a color of adequate contrast ratio.*/ 
+footer, footer a {color: #dfdfe2;}
+
+address {text-align: center;
+  padding: 0.3em;}

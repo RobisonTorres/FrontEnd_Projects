@@ -4,51 +4,25 @@
     <meta charset="UTF-8">
     <meta name="description" content="freeCodeCamp Accessibility Quiz practice project"">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="lesson_8.css">
+    <link rel="stylesheet" href="AccessibilityQuiz.css.css">
     <title>Accessibility Quiz</title></head>
 <body>
-
-<!-- The header element will be used to introduce the page, 
-as well as provide a navigation menu.-->
   <header>
     <img id="logo" src="https://cdn.freecodecamp.org/platform/universal/fcc_primary.svg"
     alt="">
     <h1>HTML/CSS Quiz</h1>
     <nav>
-
-<!-- To enable navigation on the page, add an unordered list with 
-the following three list items:-->
-
-<!-- To be able to navigate within the page, give each anchor element an 
-href corresponding to the id of the h2 elements.-->
-
-<!-- The accesskey attribute specifies a shortcut key to activate/focus an element. 
-(shift + alt + accesskey - firefox)-->
       <ul>
         <li><a href="#student-info" accesskey="i">INFO</a></li>
         <li><a href="#html-questions" accesskey="h">HTML</a></li>
         <li><a href="#css-questions" accesskey="c">CSS</a></li>
       </ul>
     </nav>
-
   </header>
-
-<!-- The main element will contain the core content of your page.-->  
   <main>
-
-<!-- Within the main element, create a form with three nested section elements.
-Then, make the form submit to https://freecodecamp.org/practice-project/accessibility-quiz,
-using the correct method.-->
-    <form method="post" action="https://freecodecamp.org/practice-project/accessibility-quiz">      
-    
-<!-- Every region role requires a visible label, which should be referenced 
-by the aria-labelledby attribute.-->    
+    <form method="post" action="https://freecodecamp.org/practice-project/accessibility-quiz">       
       <section aria-labelledby="student-info" role="region">
-        <h2 id="student-info">Student Info</h2>
-        
-<!-- It is important to link each input to the corresponding label element. 
-This provides assistive technology users with a visual reference to the input.
-This is done by giving the label a for attribute, which contains the id of the input.-->        
+        <h2 id="student-info">Student Info</h2>      
         <div class="info">
           <label for="name">Name: </label>
             <input type="text" name="name" id="name">
@@ -124,10 +98,6 @@ This is done by giving the label a for attribute, which contains the id of the i
       <button type="submit">Submit</button>
     </form>
   </main>
-
-<!-- Two final semantic HTML elements for this project are the footer and address elements.
-The footer element is a container for a collection of content that is related to the page, 
-and the address element is a container for contact information for the author of the page.-->
   <footer>
     <address>
       <a href="https://freecodecamp.org">freeCodeCamp</a><br/>
